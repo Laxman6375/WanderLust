@@ -91,6 +91,7 @@ app.get("/demouser", async (req, res) => {
 
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
+app.use("/log", userRouter);
 app.use("/", listingsRouter);
 
 app.all("*", (req, res, next) => {
